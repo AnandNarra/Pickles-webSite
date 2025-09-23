@@ -15,7 +15,7 @@ import Contact from './Components/Contact/Contact'
 }
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Components/Footer/Footer'
-import AuthProvider from './Components/AuthProvider/AuthProvider';
+import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
 import Cart from './Components/Cart/Cart'
 import Checkout from './Components/Checkout/Checkout'
 import LoginPage from './Components/LoginPage/LoginPage'
