@@ -15,6 +15,10 @@ export default function Checkout() {
         createAccount: true
     });
 
+     
+
+
+
     const handleInputChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData(prev => ({
