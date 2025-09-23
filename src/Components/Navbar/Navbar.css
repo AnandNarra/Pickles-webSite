@@ -1,0 +1,31 @@
+.navbar-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ef7c33;
+    padding: 10px;
+
+    align-items: center;
+
+
+    color: white;
+
+    position: sticky;
+  top: 0;
+  z-index: 10;
+    
+}
+
+.navbar-links-container {
+
+    display: flex;
+    gap: 20px;
+
+}
+
+.link-elements-in-navbar-container {
+
+    text-decoration: none;
+    color: white;
+}

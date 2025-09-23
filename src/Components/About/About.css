@@ -1,0 +1,43 @@
+.About-container-section{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 50px;
+    
+    
+}
+
+.About-container-section-Our-Mission{
+    background-color: #f9fafb;
+    
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 5px;
+    width: 30%;
+    
+
+    
+    
+    
+}
+
+.About-container-section-Our-Mission:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.About-container-section-Our-Mission-image-container{
+    background-color: #dcfce7;
+    width: 60px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+.About-container-section-Our-Mission-image{
+
+    width: 40px;
+    
+    
+    margin: 10px;
+}

@@ -1,0 +1,148 @@
+.carousel-images{
+    height: 50vh;
+    width: 100%;
+    
+}
+.explore-categories-container{
+
+    background-color: white;
+    color: #ef7c33;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+.explore-categories-images-container{
+
+    display: block;
+    
+}
+
+.explore-categories{
+
+    text-align: center;
+}
+.explore-categories-images{
+
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+.new-launches-section-container{
+
+    background-color: #fff7ed;
+    color: #ef7c33;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+.simple-and-clear-option-container{
+
+    background-color: #fff7ed;
+    color: #ef7c33;
+    padding: 30px 30px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    height: 60vh;
+
+}
+
+.simple-and-clear-option-container-text{
+    width: 50%;
+    padding: 30px;
+}
+
+.simple-and-clear-option-container-text-image{
+
+    width: 50%;
+    background-size: cover;
+    height: 100%;
+
+}
+
+
+
+
+/* Tagline Section Styles */
+.tagline-section {
+    
+    padding: 60px 20px;
+    margin: 50px 0;
+    
+     color: #ef7c33;
+}
+
+.tagline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background: #fff7ed
+}
+
+.tagline-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.tagline-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ed5d00;
+    text-align: center;
+}
+
+
+
+
+
+.tagline-image-container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.tagline-image {
+    height: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tagline-container {
+        flex-direction: column;
+    }
+    
+    .tagline-text {
+        font-size: 22px;
+    }
+    
+    .tagline-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tagline-text {
+        font-size: 18px;
+    }
+    
+    .tagline-section {
+        padding: 40px 15px;
+    }
+}
