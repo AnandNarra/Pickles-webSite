@@ -4,6 +4,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal } from "../../Redux/Slice/cartSlice";
 
+// import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 
 
@@ -50,6 +51,8 @@ function Navbar() {
                 {/* cart section */}
 
                 <div>
+                   
+                
                     <button onClick={() => navigate('/cart')}>
                         Cart({totalQuantity})
                     </button>
