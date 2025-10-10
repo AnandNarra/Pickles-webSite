@@ -1,6 +1,7 @@
 import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaMapMarkedAlt } from 'react-icons/fa';
 import "../Contact/Contact.css"
+import { useSelector } from "react-redux";
 
 function Contact(){
 
@@ -13,6 +14,8 @@ function Contact(){
     function handleChange(){
         console.log("anand");
     }
+
+    // const {userName}=useSelector((state) => state.loginFrom)
     return(
         <>
         <div>
@@ -20,7 +23,7 @@ function Contact(){
                     <div>
 
 
-                        <h1 style={{margin:"20px"}}>Contact Us</h1>
+                        <h1 style={{margin:"20px"}}>Contact Us </h1>
                         <div style={{ width: "100px", height: "5px", backgroundColor: "#16a34a", borderRadius: "20px", margin: "auto" ,}}></div>
                         <p style={{margin:"20px"}}>Have questions about our products or services? We're here to help!</p>
                     </div>

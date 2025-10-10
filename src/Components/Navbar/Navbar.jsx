@@ -4,7 +4,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal } from "../../Redux/Slice/cartSlice";
 
-// import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+
 
 
 
@@ -15,6 +15,8 @@ function Navbar() {
 
     const dispatch = useDispatch()
 
+    
+
      useEffect(() =>{
     
             dispatch(getCartTotal());
@@ -22,6 +24,11 @@ function Navbar() {
         } , [cart]);
 
  const navigate = useNavigate();
+
+ function handlelogout(){
+    localStorage.removeItem("authToken")
+    navigate("/")
+ }
 
     return (
         <>
@@ -50,8 +57,12 @@ function Navbar() {
 
                 {/* cart section */}
 
-                <div>
-                   
+                <div >
+                   <button onClick={() => navigate('/loginPage')}>
+                        Login
+                    </button>
+
+                    <button onClick={handlelogout}>Logout</button>
                 
                     <button onClick={() => navigate('/cart')}>
                         Cart({totalQuantity})

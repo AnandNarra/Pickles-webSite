@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decreaseItemQuantity, getCartTotal,increaseItemQuantity,removeItem } from "../../Redux/Slice/cartSlice";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 // import DeleteIcon from '@mui/icons-material/Delete';
 
 function Cart() {
 
     const navigate = useNavigate()
+    const location = useLocation();
 
     const { cart, totalQuantity, totalPrice } = useSelector((state) => state.allcart);
 
@@ -16,13 +17,23 @@ function Cart() {
 
         dispatch(getCartTotal());
 
-    });
+    },[dispatch, cart]);
 
     
 
-    const handleCheckout = () =>{
-        navigate('/checkout');
+     const handleCheckout = () => {
+        const access_token = localStorage.getItem("authToken"); // Changed to authToken to match your login
 
+        if (access_token) {
+            navigate('/checkout');
+        } else {
+            // Pass the intended destination in state
+            navigate("/loginPage", { 
+                state: { 
+                    from: '/checkout'  // This tells login where to redirect after success
+                } 
+            });
+        }
     }
 
     
