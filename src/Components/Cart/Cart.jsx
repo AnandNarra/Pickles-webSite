@@ -22,18 +22,19 @@ function Cart() {
     
 
      const handleCheckout = () => {
-        const access_token = localStorage.getItem("authToken"); // Changed to authToken to match your login
+        // const access_token = localStorage.getItem("authToken"); // Changed to authToken to match your login
 
-        if (access_token) {
-            navigate('/checkout');
-        } else {
-            // Pass the intended destination in state
-            navigate("/loginPage", { 
-                state: { 
-                    from: '/checkout'  // This tells login where to redirect after success
-                } 
-            });
-        }
+        // if (access_token) {
+        //     navigate('/checkout');
+        // } else {
+        //     // Pass the intended destination in state
+        //     navigate("/loginPage", { 
+        //         state: { 
+        //             from: '/checkout'  // This tells login where to redirect after success
+        //         } 
+        //     });
+        // }
+        navigate('/checkout');
     }
 
     
