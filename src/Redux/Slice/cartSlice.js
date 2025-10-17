@@ -18,6 +18,10 @@ export const cartSlice = createSlice({
       let find = state.cart.findIndex((item) => item.id === action.payload.id);
       
       if (find >= 0){
+
+        
+        
+        
         state.cart[find].quantity +=1
       }
 
@@ -70,9 +74,19 @@ export const cartSlice = createSlice({
       
       
       state.cart = state.cart.map((item) => {
+
+        
         
         if (item.id === action.payload) {
-          return { ...item, quantity: item.quantity - 1 };
+
+          if(item.quantity===1){
+            return {...item , quantity:1}
+          }
+          else{
+            return { ...item, quantity: item.quantity - 1 };
+
+          }
+          
         }
         return item;
       });

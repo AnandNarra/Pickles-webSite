@@ -15,7 +15,7 @@ export default function Checkout() {
         createAccount: true
     });
 
-     
+
 
 
 
@@ -128,7 +128,7 @@ export default function Checkout() {
                                         />
                                     </Form.Group>
 
-                                    
+
 
                                     <div className="d-grid gap-2 mt-4">
                                         <Button type="submit" size="lg">
@@ -149,25 +149,25 @@ export default function Checkout() {
                                 <ListGroup variant="flush">
                                     {
                                         cart.map((data) => (
-                                            <div style={{backgroundColor:"#f8f8f8" , width:"100%" ,height:"100px",padding:"5px",marginBottom:"10px"}}>
+                                            <div key = {data.id} style={{ backgroundColor: "#f8f8f8", width: "100%", height: "100px", padding: "5px", marginBottom: "10px" }}>
 
                                                 <div className="d-flex justify-content-start">
-                                                    <img src={data.image} style={{backgroundSize:"Cover",height:"90px"}}/>
+                                                    <img src={data.image} style={{ backgroundSize: "Cover", height: "90px" }} alt={data.name || 'Product'} />
 
-                                                    <div style={{marginLeft:"10px"}}>
+                                                    <div style={{ marginLeft: "10px" }}>
 
-                                                        
-                                                <p>Qty:{data.quantity}</p>
-                                                <p>$ total price :- {data.price * (data.quantity || 1)}</p> {/* Calculate total price */}
+
+                                                        <p>Qty:{data.quantity}</p>
+                                                        <p>$ total price :- {data.price * (data.quantity || 1)}</p> {/* Calculate total price */}
 
                                                     </div>
 
-                                                
+
 
 
                                                 </div>
 
-                                                
+
 
 
                                             </div>
@@ -181,16 +181,16 @@ export default function Checkout() {
                                         Tax's
                                         <span>₹ {2.7}</span>
                                     </ListGroup.Item>
-                                    
+
                                     <ListGroup.Item className="d-flex justify-content-between align-items-center px-0">
                                         Shipping
                                         <span>₹ {10.29}</span>
                                     </ListGroup.Item>
-                                    
-                                    
-                                    
-                                    
-                                    
+
+
+
+
+
                                     <ListGroup.Item className="d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                                         <div>
                                             <strong>Total amount</strong>
